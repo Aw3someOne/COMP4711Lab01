@@ -11,7 +11,6 @@
     foreach ($students as $student) {
         echo $student->toString();
     }
-    echo "It works!";
     $first = new Student();
     $first->surname = "Doe";
     $first->first_name = "John";
@@ -21,6 +20,7 @@
     $first->add_grade(75);
     $first->add_grade(55);
     $students['j123'] = $first;
+
     $second = new Student();
     $second->surname = "Einstein";
     $second->first_name = "Albert";
@@ -31,6 +31,16 @@
     $second->add_grade(80);
     $second->add_grade(50);
     $students['a456'] = $second;
+
+    $third = new Student();
+    $third->surname = "Cheng";
+    $third->first_name = "Stephen";
+    $third->add_email('home', 'notarealemail@asdf.com');
+    $third->add_email('work', 'fake.email');
+    $third->add_grade(70);
+    $third->add_grade(80);
+    $third->add_grade(90);
+    $students['s789'] = $third;
     ksort($students);
     foreach ($students as $student) {
         echo $student->toString();
