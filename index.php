@@ -6,7 +6,7 @@
 </head>
 <body>
   <?php
-    include('student.php');
+    include('Student.php');
     $students = array();
     foreach ($students as $student) {
         echo $student->toString();
